@@ -1,4 +1,4 @@
-package com.darks.guiapi;
+package darks.guiapi;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;

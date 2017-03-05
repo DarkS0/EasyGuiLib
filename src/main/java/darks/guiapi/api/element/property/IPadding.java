@@ -1,6 +1,6 @@
-package com.darks.guiapi.api.element.property;
+package darks.guiapi.api.element.property;
 
-public interface IMargin
+public interface IPadding
 {
 	float getUp();
 

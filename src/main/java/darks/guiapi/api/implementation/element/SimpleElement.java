@@ -1,23 +1,45 @@
-package com.darks.guiapi.api.implementation;
+package darks.guiapi.api.implementation.element;
 
-import com.darks.guiapi.api.element.IElement;
-import com.darks.guiapi.api.element.property.*;
-import com.darks.guiapi.api.element.action.IAction;
-import com.darks.guiapi.api.element.listener.IActionListener;
+import darks.guiapi.api.element.IElement;
+import darks.guiapi.api.element.action.IAction;
+import darks.guiapi.api.element.listener.IActionListener;
+import darks.guiapi.api.element.property.*;
 
+import javax.annotation.Nonnull;
 import java.util.Set;
 
-public abstract class Element implements IElement
+public abstract class SimpleElement implements IElement
 {
+	@Nonnull
 	private IPosition position;
 	private float width, height;
+	@Nonnull
 	private IPadding padding;
+	@Nonnull
 	private IMargin margin;
+	@Nonnull
 	private IOutline outline;
+	@Nonnull
 	private IAnimation animation;
+	@Nonnull
 	private Set<IExtendedProperty> extendedProperties;
+	@Nonnull
 	private Set<IActionListener> actionListeners;
 
+	public SimpleElement(@Nonnull IPosition position, float width, float height, @Nonnull IPadding padding, @Nonnull IMargin margin, @Nonnull IOutline outline, @Nonnull IAnimation animation, @Nonnull Set<IExtendedProperty> extendedProperties, @Nonnull Set<IActionListener> actionListeners)
+	{
+		this.position = position;
+		this.width = width;
+		this.height = height;
+		this.padding = padding;
+		this.margin = margin;
+		this.outline = outline;
+		this.animation = animation;
+		this.extendedProperties = extendedProperties;
+		this.actionListeners = actionListeners;
+	}
+
+	@Nonnull
 	@Override
 	public IPosition getPosition()
 	{
@@ -25,7 +47,7 @@ public abstract class Element implements IElement
 	}
 
 	@Override
-	public void setPosition(IPosition position)
+	public void setPosition(@Nonnull IPosition position)
 	{
 		this.position = position;
 	}
@@ -54,6 +76,7 @@ public abstract class Element implements IElement
 		this.height = height;
 	}
 
+	@Nonnull
 	@Override
 	public IPadding getPadding()
 	{
@@ -61,11 +84,12 @@ public abstract class Element implements IElement
 	}
 
 	@Override
-	public void setPadding(IPadding padding)
+	public void setPadding(@Nonnull IPadding padding)
 	{
 		this.padding = padding;
 	}
 
+	@Nonnull
 	@Override
 	public IMargin getMargin()
 	{
@@ -73,11 +97,12 @@ public abstract class Element implements IElement
 	}
 
 	@Override
-	public void setMargin(IMargin margin)
+	public void setMargin(@Nonnull IMargin margin)
 	{
 		this.margin = margin;
 	}
 
+	@Nonnull
 	@Override
 	public IOutline getOutline()
 	{
@@ -85,11 +110,12 @@ public abstract class Element implements IElement
 	}
 
 	@Override
-	public void setOutline(IOutline outline)
+	public void setOutline(@Nonnull IOutline outline)
 	{
 		this.outline = outline;
 	}
 
+	@Nonnull
 	@Override
 	public IAnimation getAnimation()
 	{
@@ -97,19 +123,21 @@ public abstract class Element implements IElement
 	}
 
 	@Override
-	public void setAnimation(IAnimation animation)
+	public void setAnimation(@Nonnull IAnimation animation)
 	{
 		this.animation = animation;
 	}
 
+	@Nonnull
 	@Override
 	public Set<IExtendedProperty> getExtendedProperties()
 	{
 		return extendedProperties;
 	}
 
+	@Nonnull
 	@Override
-	public IElement withProperty(IExtendedProperty property)
+	public IElement withProperty(@Nonnull IExtendedProperty property)
 	{
 		extendedProperties.add(property);
 
