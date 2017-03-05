@@ -1,4 +1,4 @@
-package darks.guiapi.api.implementation.element.property.position;
+package darks.guiapi.implementation.element.property.position;
 
 import darks.guiapi.api.element.property.IPosition;
 import net.minecraft.util.math.Vec2f;

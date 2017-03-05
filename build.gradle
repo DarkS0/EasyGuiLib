@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = version_major + "." + version_minor + "." + version_patch
 group = "darks.guiapi"
-archivesBaseName = "GuiAPI_" + mc_version
+archivesBaseName = "GuiAPI_" + mcversion
 
 sourceCompatibility = targetCompatibility = "1.8"
 compileJava {
@@ -19,11 +19,11 @@ compileJava {
 }
 
 minecraft {
-    version = mc_version + "-" + forge_version
+    version = mcversion + "-" + forge_version
     runDir = "run"
     replace '@VERSION@', project.version
-    mappings = mappings
-    makeObfSourceJar = false
+    mappings = mcp_mappings
+    //makeObfSourceJar = false
 }
 
 dependencies {

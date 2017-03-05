@@ -1,4 +1,4 @@
-package darks.guiapi.api.implementation.element.property.margin;
+package darks.guiapi.implementation.element.property.margin;
 
 import darks.guiapi.api.element.property.IMargin;
 

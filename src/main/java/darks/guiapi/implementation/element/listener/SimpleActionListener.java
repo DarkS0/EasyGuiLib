@@ -1,4 +1,4 @@
-package darks.guiapi.api.implementation.element.listener;
+package darks.guiapi.implementation.element.listener;
 
 import darks.guiapi.api.element.action.IAction;
 import darks.guiapi.api.element.listener.IActionListener;

@@ -1,4 +1,4 @@
-package darks.guiapi.api.implementation.element;
+package darks.guiapi.implementation.element;
 
 import darks.guiapi.api.element.IElement;
 import darks.guiapi.api.element.action.IAction;

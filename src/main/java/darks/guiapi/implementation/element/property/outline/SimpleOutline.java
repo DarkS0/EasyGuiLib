@@ -1,7 +1,8 @@
-package darks.guiapi.api.implementation.element.property.outline;
+package darks.guiapi.implementation.element.property.outline;
 
 import darks.guiapi.api.element.IElement;
 import darks.guiapi.api.element.property.IOutline;
+import darks.guiapi.util.Color;
 import net.minecraft.client.renderer.VertexBuffer;
 
 import javax.annotation.Nonnull;
@@ -9,14 +10,12 @@ import javax.annotation.Nonnull;
 public class SimpleOutline implements IOutline
 {
 	private float width;
-	private int color;
 	@Nonnull
 	private IFillStyle fillStyle;
 
-	public SimpleOutline(float width, int color, @Nonnull IFillStyle fillStyle)
+	public SimpleOutline(float width, @Nonnull IFillStyle fillStyle)
 	{
 		this.width = width;
-		this.color = color;
 		this.fillStyle = fillStyle;
 	}
 
@@ -38,18 +37,6 @@ public class SimpleOutline implements IOutline
 		this.width = width;
 	}
 
-	@Override
-	public int getColor()
-	{
-		return color;
-	}
-
-	@Override
-	public void setColor(int color)
-	{
-		this.color = color;
-	}
-
 	@Nonnull
 	@Override
 	public IFillStyle getFillStyle()
@@ -65,15 +52,15 @@ public class SimpleOutline implements IOutline
 
 	public static abstract class SimpleFillStyle implements IFillStyle
 	{
-		private int color;
+		private Color color;
 
-		public SimpleFillStyle(int color)
+		public SimpleFillStyle(Color color)
 		{
 			this.color = color;
 		}
 
 		@Override
-		public int getColor()
+		public Color getColor()
 		{
 			return color;
 		}

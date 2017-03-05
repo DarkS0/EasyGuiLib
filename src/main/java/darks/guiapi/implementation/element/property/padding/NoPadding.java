@@ -1,4 +1,4 @@
-package darks.guiapi.api.implementation.element.property.padding;
+package darks.guiapi.implementation.element.property.padding;
 
 public class NoPadding extends SimplePadding
 {

@@ -1,6 +1,7 @@
 package darks.guiapi.api.element.property;
 
 import darks.guiapi.api.element.IElement;
+import darks.guiapi.util.Color;
 import net.minecraft.client.renderer.VertexBuffer;
 
 import javax.annotation.Nonnull;
@@ -13,17 +14,13 @@ public interface IOutline
 
 	void setWidth(float width);
 
-	int getColor();
-
-	void setColor(int color);
-
 	IFillStyle getFillStyle();
 
 	void setFillStyle(IFillStyle fillStyle);
 
 	interface IFillStyle
 	{
-		int getColor();
+		Color getColor();
 
 		void render(@Nonnull IElement element, @Nonnull VertexBuffer buffer);
 	}

@@ -1,4 +1,4 @@
-package darks.guiapi.api.implementation.element.property.padding;
+package darks.guiapi.implementation.element.property.padding;
 
 import darks.guiapi.api.element.property.IPadding;
 
