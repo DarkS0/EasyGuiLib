@@ -1,19 +1,17 @@
-# eclipse
-bin
-.classpath
-.project
-
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
-
-# gradle
-build
-.gradle
-
-# other
-eclipse
-run
+/*
+/*/
+!/src/
+!.gitattributes
+!.gitignore
+!build.bat
+!build.gradle
+!gradle.properties
+!gradlew*
+!gradlew
+!gradlew.bat
+!setup.bat
+!/gradle/
+!/LICENSE.md
+!/README.md
+!/run/mods/1.10.2/easyguilib/
+!.editorconfig
