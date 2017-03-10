@@ -15,11 +15,11 @@ public interface IOutline
 
 	void setWidth(float width);
 
-	IFillStyle getFillStyle();
+	IOutlineFill getFillStyle();
 
-	void setFillStyle(IFillStyle fillStyle);
+	void setFillStyle(IOutlineFill fillStyle);
 
-	interface IFillStyle
+	interface IOutlineFill
 	{
 		Color getColor();
 

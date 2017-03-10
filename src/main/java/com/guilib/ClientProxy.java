@@ -1,15 +1,14 @@
-package com.foo.testguimod.proxy;
+package com.guilib;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ClientProxy extends CommonProxy{
-	
-	
+public class ClientProxy extends CommonProxy
+{
 	@Override
-	public void preInit(){
-		
+	public void preInit()
+	{
+		super.preInit();
 	}
-	
 }

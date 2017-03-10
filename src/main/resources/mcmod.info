@@ -1,7 +1,7 @@
 [{
   "modid": "guiapi",
-  "name": "Gui API",
-  "description": "Simple API for Guis.",
+  "name": "GuiLib",
+  "description": "Simple Lib for Guis.",
   "version": "${version_major}.${version_minor}.${version_patch}",
   "mcversion": "${mcversion}",
   "url": "",

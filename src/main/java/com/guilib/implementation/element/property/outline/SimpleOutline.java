@@ -12,9 +12,9 @@ public class SimpleOutline implements IOutline
 {
 	private float width;
 	@Nonnull
-	private IFillStyle fillStyle;
+	private IOutlineFill fillStyle;
 
-	public SimpleOutline(float width, @Nonnull IFillStyle fillStyle)
+	public SimpleOutline(float width, @Nonnull IOutlineFill fillStyle)
 	{
 		this.width = width;
 		this.fillStyle = fillStyle;
@@ -40,18 +40,18 @@ public class SimpleOutline implements IOutline
 
 	@Nonnull
 	@Override
-	public IFillStyle getFillStyle()
+	public IOutlineFill getFillStyle()
 	{
 		return fillStyle;
 	}
 
 	@Override
-	public void setFillStyle(IFillStyle fillStyle)
+	public void setFillStyle(IOutlineFill fillStyle)
 	{
 		this.fillStyle = fillStyle;
 	}
 
-	public static abstract class SimpleFillStyle implements IFillStyle
+	public static abstract class SimpleFillStyle implements IOutlineFill
 	{
 		private Color color;
 

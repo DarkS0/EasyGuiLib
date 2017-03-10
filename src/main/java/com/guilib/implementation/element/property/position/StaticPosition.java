@@ -1,16 +1,15 @@
 package com.guilib.implementation.element.property.position;
 
-import net.minecraft.util.math.Vec2f;
+import com.guilib.api.element.property.IPosition;
+import com.guilib.util.Vec2i;
 
 import javax.annotation.Nonnull;
 
-import com.guilib.api.element.property.IPosition;
-
 public class StaticPosition implements IPosition
 {
-	private float x, y;
+	private int x, y;
 
-	public StaticPosition(float x, float y)
+	public StaticPosition(int x, int y)
 	{
 		this.x = x;
 		this.y = y;
@@ -18,8 +17,8 @@ public class StaticPosition implements IPosition
 
 	@Nonnull
 	@Override
-	public Vec2f get()
+	public Vec2i get()
 	{
-		return new Vec2f(x, y);
+		return new Vec2i(x, y);
 	}
 }

@@ -1,10 +1,15 @@
 package com.guilib.implementation.element.property.padding;
 
-import com.guilib.api.element.property.Padding;
+import com.guilib.api.element.IElement;
+import com.guilib.api.element.property.IPadding;
+import net.minecraft.client.renderer.VertexBuffer;
 
-public class SimplePadding implements Padding
+import javax.annotation.Nonnull;
+
+public class SimplePadding implements IPadding
 {
 	private float up, right, down, left;
+	private IPadding.IPaddingFill fill;
 
 	public SimplePadding(float up, float right, float down, float left)
 	{
@@ -12,6 +17,12 @@ public class SimplePadding implements Padding
 		this.right = right;
 		this.down = down;
 		this.left = left;
+	}
+
+	@Override
+	public void render(@Nonnull IElement element, @Nonnull VertexBuffer buffer)
+	{
+		fill.render(element, buffer);
 	}
 
 	@Override
@@ -60,5 +71,17 @@ public class SimplePadding implements Padding
 	public void setLeft(float left)
 	{
 		this.left = left;
+	}
+
+	@Override
+	public IPaddingFill getFillStyle()
+	{
+		return fill;
+	}
+
+	@Override
+	public void setFillStyle(IPaddingFill fillStyle)
+	{
+		this.fill = fillStyle;
 	}
 }
