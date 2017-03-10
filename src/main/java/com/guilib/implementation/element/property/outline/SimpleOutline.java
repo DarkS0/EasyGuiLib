@@ -1,12 +1,11 @@
 package com.guilib.implementation.element.property.outline;
 
-import net.minecraft.client.renderer.VertexBuffer;
-
-import javax.annotation.Nonnull;
-
 import com.guilib.api.element.IElement;
 import com.guilib.api.element.property.IOutline;
 import com.guilib.util.Color;
+import net.minecraft.client.renderer.VertexBuffer;
+
+import javax.annotation.Nonnull;
 
 public class SimpleOutline implements IOutline
 {
@@ -33,9 +32,11 @@ public class SimpleOutline implements IOutline
 	}
 
 	@Override
-	public void setWidth(float width)
+	public IOutline setWidth(float width)
 	{
 		this.width = width;
+
+		return this;
 	}
 
 	@Nonnull
@@ -46,9 +47,11 @@ public class SimpleOutline implements IOutline
 	}
 
 	@Override
-	public void setFillStyle(IOutlineFill fillStyle)
+	public IOutline setFillStyle(IOutlineFill fillStyle)
 	{
 		this.fillStyle = fillStyle;
+
+		return this;
 	}
 
 	public static abstract class SimpleFillStyle implements IOutlineFill

@@ -1,7 +1,7 @@
 package com.guilib.implementation.element;
 
 import com.guilib.api.element.IElement;
-import com.guilib.api.element.events.IAction;
+import com.guilib.api.element.action.IAction;
 import com.guilib.api.element.property.*;
 import net.minecraft.block.properties.IProperty;
 

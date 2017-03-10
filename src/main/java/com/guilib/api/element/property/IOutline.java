@@ -13,11 +13,11 @@ public interface IOutline
 
 	float getWidth();
 
-	void setWidth(float width);
+	IOutline setWidth(float width);
 
 	IOutlineFill getFillStyle();
 
-	void setFillStyle(IOutlineFill fillStyle);
+	IOutline setFillStyle(IOutlineFill fillStyle);
 
 	interface IOutlineFill
 	{

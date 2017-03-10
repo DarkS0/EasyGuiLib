@@ -32,9 +32,11 @@ public class SimplePadding implements IPadding
 	}
 
 	@Override
-	public void setUp(float up)
+	public IPadding setUp(float up)
 	{
 		this.up = up;
+
+		return this;
 	}
 
 	@Override
@@ -44,9 +46,11 @@ public class SimplePadding implements IPadding
 	}
 
 	@Override
-	public void setRight(float right)
+	public IPadding setRight(float right)
 	{
 		this.right = right;
+
+		return this;
 	}
 
 	@Override
@@ -56,9 +60,11 @@ public class SimplePadding implements IPadding
 	}
 
 	@Override
-	public void setDown(float down)
+	public IPadding setDown(float down)
 	{
 		this.down = down;
+
+		return this;
 	}
 
 	@Override
@@ -68,9 +74,11 @@ public class SimplePadding implements IPadding
 	}
 
 	@Override
-	public void setLeft(float left)
+	public IPadding setLeft(float left)
 	{
 		this.left = left;
+
+		return this;
 	}
 
 	@Override
@@ -80,8 +88,10 @@ public class SimplePadding implements IPadding
 	}
 
 	@Override
-	public void setFillStyle(IPaddingFill fillStyle)
+	public IPadding setFillStyle(IPaddingFill fillStyle)
 	{
 		this.fill = fillStyle;
+
+		return this;
 	}
 }

@@ -4,20 +4,17 @@ public interface IMargin
 {
 	float getUp();
 
-	void setUp(float up);
-
+	IMargin setUp(float up);
 
 	float getRight();
 
-	void setRight(float right);
-
+	IMargin setRight(float right);
 
 	float getDown();
 
-	void setDown(float down);
-
+	IMargin setDown(float down);
 
 	float getLeft();
 
-	void setLeft(float left);
+	IMargin setLeft(float left);
 }

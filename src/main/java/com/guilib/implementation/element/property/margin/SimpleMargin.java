@@ -21,9 +21,11 @@ public class SimpleMargin implements IMargin
 	}
 
 	@Override
-	public void setUp(float up)
+	public IMargin setUp(float up)
 	{
 		this.up = up;
+
+		return this;
 	}
 
 	@Override
@@ -33,9 +35,11 @@ public class SimpleMargin implements IMargin
 	}
 
 	@Override
-	public void setRight(float right)
+	public IMargin setRight(float right)
 	{
 		this.right = right;
+
+		return this;
 	}
 
 	@Override
@@ -45,9 +49,11 @@ public class SimpleMargin implements IMargin
 	}
 
 	@Override
-	public void setDown(float down)
+	public IMargin setDown(float down)
 	{
 		this.down = down;
+
+		return this;
 	}
 
 	@Override
@@ -57,8 +63,10 @@ public class SimpleMargin implements IMargin
 	}
 
 	@Override
-	public void setLeft(float left)
+	public IMargin setLeft(float left)
 	{
 		this.left = left;
+
+		return this;
 	}
 }

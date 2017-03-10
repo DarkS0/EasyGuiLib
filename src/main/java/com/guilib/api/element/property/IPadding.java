@@ -12,23 +12,23 @@ public interface IPadding
 
 	float getUp();
 
-	void setUp(float up);
+	IPadding setUp(float up);
 
 	float getRight();
 
-	void setRight(float right);
+	IPadding setRight(float right);
 
 	float getDown();
 
-	void setDown(float down);
+	IPadding setDown(float down);
 
 	float getLeft();
 
-	void setLeft(float left);
+	IPadding setLeft(float left);
 
 	IPaddingFill getFillStyle();
 
-	void setFillStyle(IPaddingFill fillStyle);
+	IPadding setFillStyle(IPaddingFill fillStyle);
 
 	interface IPaddingFill
 	{
